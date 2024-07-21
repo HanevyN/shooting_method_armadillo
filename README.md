@@ -22,6 +22,10 @@ The system is solved by making a similarity tranformation
 ```
 and solving as a system of first order equations using a fourth order Rungga-Kutta method
 see https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods.
+This requires finding the unknown initial conditions which satify the boundary conditions as $y \to \infty$.
+This is done using a Newtown type iteration scheme.
+Note that this scheme is sensitive to the quality of the initial guess. 
+This can be ameliorated by solving the problem on incrementally larger domains.
 
 The code was ran using Armadillo on ubuntu see https://arma.sourceforge.net/ 
 Provided Armadillo is on your path (see the link above for details), the code can be 
